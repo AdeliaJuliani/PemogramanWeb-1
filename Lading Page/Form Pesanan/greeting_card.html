@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terima Kasih - Jersey Street</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f4f7;
+      color: #020205;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .thank-you-container {
+      text-align: center;
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      max-width: 600px;
+    }
+    h1 {
+      color: #e43a19;
+    }
+    p {
+      font-size: 16px;
+      margin: 20px 0;
+      color: #111f4d;
+    }
+    button {
+      background-color: #e43a19;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #111f4d;
+    }
+    button a {
+      text-decoration: none;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div class="thank-you-container">
+    <h1>Terima Kasih!</h1>
+    <p>Terima kasih telah memesan di <strong>Jersey Street</strong>. Pesanan Anda sedang kami proses. Kami akan menghubungi Anda untuk informasi lebih lanjut.</p>
+    <button onclick="redirectToHomepage()">Kembali ke Beranda</button>
+  </div>
+
+  <script>
+    function redirectToHomepage() {
+      window.location.href = "http://localhost/PemrogramanWeb1/Lading%20Page/";
+    }
+  </script>
+</body>
+</html>
