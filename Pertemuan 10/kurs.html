@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Kurs</title>
+    <script>
+        function hitungKurs() {
+            const form = document.getElementById("form");
+            const nilai = parseFloat(form.elements["nilai"].value); 
+            const kurs = parseFloat(form.elements["Kurs"].value);  
+
+            if (isNaN(nilai) || isNaN(kurs)) {
+                form.elements["hasil"].value = "Input tidak valid";
+                return;
+            }
+
+            const hasil = nilai * kurs;
+            form.elements["hasil"].value = hasil.toLocaleString('id-ID');
+        }
+    </script>
+</head>
+<body>
+    <marquee onmouseover="this.stop()" onmouseout="this.start()">Konversi Kurs Mata Uang</marquee>
+    <div style="padding: 10px; background: rgb(155, 170, 237); border: 1px dotted yellow;">
+        <form id="form">
+            Nilai <input type="text" name="nilai" placeholder="Masukkan nilai"/>
+            <select name="Kurs" onchange="hitungKurs()">
+                <option value="">-- Pilih Kurs --</option>
+                <option value="15800">Dollar USA</option>
+                <option value="2150">Yuan</option>
+                <option value="3000">Ringgit</option>
+                <option value="1000">Dollar Singapura</option>
+                <option value="4000">Riyal</option>
+            </select>
+            <br><br>
+            Hasil: <input type="text" name="hasil" readonly placeholder="Hasil konversi"/>
+        </form>
+    </div>
+</body>
+</html>

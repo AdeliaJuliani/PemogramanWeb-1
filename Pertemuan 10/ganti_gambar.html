@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Ganti Gambar</title>
+    <script>
+        function tampilanGambar() {
+           
+            let nilaiTerpilih = document.getElementById("pilihGambar").value;
+
+            
+            let gambarPilih = document.getElementById("gambarPilih");
+            switch (nilaiTerpilih) {
+                case "gambar1":
+                    gambarPilih.src = "img/p1.webp";
+                    break;
+                case "gambar2":
+                    gambarPilih.src = "img/p2.webp";
+                    break;
+                case "gambar3":
+                    gambarPilih.src = "img/p3.webp";
+                    break;
+                case "gambar4":
+                    gambarPilih.src = "img/p4.webp";
+                    break;
+                default:
+                    gambarPilih.src = ""; 
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>Ganti Gambar</h2>
+    <label for="pilihGambar">Pilih Gambar:</label>
+    <select id="pilihGambar" onchange="tampilanGambar()">
+        <option value="">-- Pilih Gambar --</option>
+        <option value="gambar1">Baju 1</option>
+        <option value="gambar2">Baju 2</option>
+        <option value="gambar3">Baju 3</option>
+        <option value="gambar4">Baju 3</option>
+    </select>
+    <br><br>
+    <img src="" id="gambarPilih" alt="Gambar belum dipilih" width="300">
+</body>
+</html>
